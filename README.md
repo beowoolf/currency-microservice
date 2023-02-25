@@ -22,3 +22,14 @@ Jeśli wpisze się kod waluty, która nie istnieje w aplikacji robiąc jedno z t
 
 wtedy zostaje obsłużony wyjątek i mikroserwis zamiast zwrócić wartości tej waluty zwraca wiadomość, że taki {code} nie
 istnieje.
+
+```bash
+# tworzenie obrazu
+$ docker build -f Dockerfile -t currency-service .
+
+# uruchomienie obrazu
+$ docker run -d -p 8001:8080 currency-service
+
+# przykładowe wywołanie, aby sprawdzić poprawność procesu budowania obrazu i jego uruchomienia
+$ curl http://localhost:8001/currency/PLN
+```
