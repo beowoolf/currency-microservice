@@ -23,12 +23,17 @@ If you enter a currency code that does not exist in the application by making on
 then an exception is handled and the microservice, instead of returning the value of this currency, returns a message
 that such a {code} does not exist.
 
+## Main commands
+
 ```bash
 # image creation
 $ docker build -f Dockerfile -t currency-service .
 
 # starting the image
 $ docker run -d -p 8001:8080 currency-service
+
+# image composing
+$ docker-compose up -d
 
 # sample call to validate the process of building the image and running it
 $ curl http://localhost:8001/currency/PLN
