@@ -1,7 +1,7 @@
 package com.microservices.currencymicroservice.controller;
 
 import com.microservices.currencymicroservice.model.CurrencyResponse;
-import com.microservices.currencymicroservice.service.CurrencyService;
+import com.microservices.currencymicroservice.service.CurrencyFacade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/currency")
 public class CurrencyController {
 
-    private final CurrencyService currencyService;
+    private final CurrencyFacade currencyService;
 
     @GetMapping("/{code}")
     public CurrencyResponse getCurrencyValue(@PathVariable String code) {

@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class SimpleCurrencyServiceTest {
 
-    final CurrencyService simpleCurrencyService = new SimpleCurrencyService();
+    final CurrencyFacade simpleCurrencyService = new SimpleCurrencyService();
 
     private static Stream<Arguments> currencyValuesProvider() {
         return Stream.of(

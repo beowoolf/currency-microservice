@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.function.Predicate;
 
 @Service
-public class SimpleCurrencyService implements CurrencyService {
+public class SimpleCurrencyService implements CurrencyFacade {
 
     private static final Map<String, Double> currencies = new HashMap<>();
 
